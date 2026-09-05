@@ -63,15 +63,15 @@ Antigravity is a **tool + measurement framework + automation runtime**: it obser
 ### 1.3 High-Level Architecture
 
 ```
- ┌────────────┐   ┌────────────────────┐   ┌───────────────────┐   ┌─────────────┐
- │  Sensors   │──▶│ Gravity Field       │──▶│ Thrust Engine      │──▶│ Telemetry & │
- │ (collectors)│   │ Mapper (analysis)   │   │ (interventions)    │   │ Metrics Store│
- └────────────┘   └────────────────────┘   └───────────────────┘   └─────────────┘
-        ▲                                                                  │
-        │                                                                  ▼
-        │                                                          ┌───────────────┐
-        └──────────────────────── feedback loop ────────────────── │ Dashboard / API│
-                                                                     └───────────────┘
+┌──────────────┐      ┌───────────────────┐      ┌──────────────────┐      ┌───────────────────┐
+│   Sensors    │────▶│   Gravity Field   │────▶ │   Thrust Engine  │────▶│    Telemetry &    │
+│ (collectors) │      │ Mapper (analysis) │      │  (interventions) │      │   Metrics Store   │
+└──────────────┘      └───────────────────┘      └──────────────────┘      └─────────┬─────────┘
+                                ▲                                                    │
+                                │                                                    ▼
+                                │                                         ┌───────────────────┐
+                                └──────────────── feedback loop ───────── │  Dashboard / API  │
+                                                                          └───────────────────┘
 ```
 
 ### 1.4 Key Features
