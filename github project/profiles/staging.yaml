@@ -1,0 +1,9 @@
+thrust_engine:
+  dry_run: true
+  poll_interval_seconds: 180
+thrusters:
+  test_quarantine:
+    enabled: true
+    flake_threshold: 0.15
+  cache_warmer:
+    enabled: true
